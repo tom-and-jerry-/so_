@@ -123,6 +123,7 @@ class Tree {
  public:
   Tree(TreeNode *r) : root(r) {}
  
+  /*------------iterator-start--------------*/
   class Iterator {
    public:
     Iterator(TreeNode *root) {
@@ -184,6 +185,8 @@ class Tree {
     TreeNode *cur;
     stack<pair<TreeNode*, int> > states;
   };
+  /*-----------end-iterator-------------*/
+
   Iterator begin() {
     return Iterator(root);
   }
